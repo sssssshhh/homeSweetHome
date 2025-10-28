@@ -3,11 +3,15 @@ import HomePage from "~/common/pages/home-page";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Zip" },
+    { name: "description", content: "Zip is for your home" },
   ];
 }
 
 export default function Home() {
-  return <HomePage />;
+  return (
+    <div className="p-26">
+      <HomePage />
+    </div>
+  );
 }
