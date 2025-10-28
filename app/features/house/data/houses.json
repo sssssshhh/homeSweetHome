@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "ハイツ・ヴィラNO.8",
+    "image": "https://images.unsplash.com/photo-1761604297459-c2a4a0b18b0b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=872",
+    "location": "ＪＲ京葉線/舞浜駅 歩29分",
+    "specs": "築40年2階建",
+    "badges": ["1階", "礼金あり", "ワンルーム"]
+  },
+  {
+    "id": 2,
+    "title": "シャロン・パレス",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=872",
+    "location": "東京メトロ/赤坂見附駅 歩10分",
+    "specs": "築15年5階建",
+    "badges": ["2階", "敷金あり", "2LDK"]
+  },
+  {
+    "id": 3,
+    "title": "エメラルド・マンション",
+    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=872",
+    "location": "JR山手線/恵比寿駅 歩15分",
+    "specs": "築8年3階建",
+    "badges": ["3階", "礼金なし", "1LDK"]
+  },
+  {
+    "id": 4,
+    "title": "サンセット・レジデンス",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=872",
+    "location": "東武東上線/池袋駅 歩7分",
+    "specs": "築20年4階建",
+    "badges": ["1階", "礼金あり", "3LDK"]
+  },
+  {
+    "id": 5,
+    "title": "オアシス・ハイツ",
+    "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=872",
+    "location": "京王線/新宿駅 歩12分",
+    "specs": "築12年2階建",
+    "badges": ["2階", "敷金なし", "2K"]
+  },
+  {
+    "id": 6,
+    "title": "グランド・タワー",
+    "image": "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=872",
+    "location": "都営大江戸線/新宿御苑駅 歩5分",
+    "specs": "築5年6階建",
+    "badges": ["4階", "礼金あり", "1LDK"]
+  },
+  {
+    "id": 7,
+    "title": "グランド・タワー",
+    "image": "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=872",
+    "location": "都営大江戸線/新宿御苑駅 歩5分",
+    "specs": "築5年6階建",
+    "badges": ["4階", "礼金あり", "1LDK"]
+  }
+]
+

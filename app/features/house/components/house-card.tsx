@@ -1,42 +1,59 @@
-import { Button } from "~/common/components/ui/button";
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/common/components/ui/card";
-import { Input } from "~/common/components/ui/input";
-import { Label } from "~/common/components/ui/label";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/common/components/ui/card";
 import { Badge } from "~/common/components/ui/badge";
+import housesData from "~/features/house/data/houses.json";
 
+interface House {
+  id: number;
+  title: string;
+  image: string;
+  location: string;
+  specs: string;
+  badges: string[];
+}
 
 export function HouseCard() {
+  const houses = housesData as House[];
+
   return (
-    <Card className="w-full max-w-md">
-        <CardHeader>
-            <CardTitle className="pb-2">ハイツ・ヴィラNO.8</CardTitle>
-            <CardDescription>
+    <div className="w-full px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {houses.map((house) => (
+          <Card key={house.id} className="w-full">
+            <CardHeader>
+              <CardTitle className="pb-2">{house.title}</CardTitle>
+              <CardDescription>
                 <div className="flex flex-row text-sm w-full h-40">
-                    <div className="w-1/2 flex">
-                        <img src="https://images.unsplash.com/photo-1761604297459-c2a4a0b18b0b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=872" alt="home" width={120} height={32} />
-                    </div>
-                    <div className="w-1/2 h-full flex flex-col justify-center items-center gap-2">
-                        <span className="text-sm">ＪＲ京葉線/舞浜駅 歩29分</span>
-                        <span className="text-sm">築40年2階建</span>
-                    </div>
+                  <div className="w-1/2 flex">
+                    <img src={house.image} alt={house.title} className="w-full h-full object-cover rounded" />
+                  </div>
+                  <div className="w-1/2 h-full flex flex-col justify-center items-center gap-2 pl-2">
+                    <span className="text-sm text-center">{house.location}</span>
+                    <span className="text-sm text-center">{house.specs}</span>
+                  </div>
                 </div>
-            </CardDescription>
-        </CardHeader>
-        <CardContent className="">
-        <div className="flex flex-row gap-2">
-            <Badge className="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums" variant="default">
-            1階
-            </Badge>
-            <Badge className="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums" variant="secondary">
-                礼金あり
-            </Badge>
-            <Badge className="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums" variant="outline"   >
-                ワンルーム
-            </Badge>
-        </div>
-        </CardContent>
-        <CardFooter className="flex-col gap-2">
-        </CardFooter>
-    </Card>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="">
+              <div className="flex flex-row gap-2 flex-wrap">
+                {house.badges.map((badge, index) => {
+                  const variants: ("default" | "secondary" | "outline")[] = ["default", "secondary", "outline"];
+                  return (
+                    <Badge 
+                      key={index}
+                      className="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums" 
+                      variant={variants[index % variants.length]}
+                    >
+                      {badge}
+                    </Badge>
+                  );
+                })}
+              </div>
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </div>
   );
 }
