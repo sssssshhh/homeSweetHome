@@ -3,8 +3,8 @@ import HomePage from "~/common/pages/home-page";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Zip" },
-    { name: "description", content: "Zip is for your home" },
+    { title: "Home Sweet Home" },
+    { name: "description", content: "We will find you the perfect home" },
   ];
 }
 
