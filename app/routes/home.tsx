@@ -10,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="p-26">
+    <div>
       <HomePage />
     </div>
   );

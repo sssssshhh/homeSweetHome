@@ -16,6 +16,9 @@ export function HouseCard() {
 
   return (
     <div className="w-full px-4">
+      <div className="w-full flex justify-center items-center mb-10">
+        <div className="w-full text-center text-7xl">🏠</div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {houses.map((house) => (
           <Card key={house.id} className="w-full">
