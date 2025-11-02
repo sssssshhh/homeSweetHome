@@ -4,6 +4,6 @@ export default [
     index("common/pages/home-page.tsx"),
     route(
         "/houses",
-        "features/house/pages/houses-page.tsx"
+        "features/houses/pages/houses-page.tsx"
       ),
 ] satisfies RouteConfig;
